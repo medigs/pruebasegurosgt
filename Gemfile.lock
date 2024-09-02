@@ -73,6 +73,7 @@ GEM
       tzinfo (~> 2.0, >= 2.0.5)
     ast (2.4.2)
     base64 (0.2.0)
+    bcrypt (3.1.20)
     bigdecimal (3.1.8)
     bootsnap (1.18.4)
       msgpack (~> 1.2)
@@ -98,6 +99,8 @@ GEM
       rdoc (>= 4.0.0)
       reline (>= 0.4.2)
     json (2.7.2)
+    jwt (2.8.2)
+      base64
     language_server-protocol (3.17.0.3)
     logger (1.6.1)
     loofah (2.22.0)
@@ -218,6 +221,9 @@ GEM
       rubocop-rails
     ruby-progressbar (1.13.0)
     securerandom (0.3.1)
+    simple_form (5.3.1)
+      actionpack (>= 5.2)
+      activemodel (>= 5.2)
     sqlite3 (2.0.4-aarch64-linux-gnu)
     sqlite3 (2.0.4-aarch64-linux-musl)
     sqlite3 (2.0.4-arm-linux-gnu)
@@ -258,14 +264,17 @@ PLATFORMS
   x86_64-linux-musl
 
 DEPENDENCIES
+  bcrypt (~> 3.1.7)
   bootsnap
   brakeman
   colorize
   debug
+  jwt
   mysql2
   puma (>= 5.0)
   rails (~> 7.2.1)
   rubocop-rails-omakase
+  simple_form
   sqlite3 (>= 1.4)
   tzinfo-data
 

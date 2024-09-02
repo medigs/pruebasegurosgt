@@ -4,15 +4,11 @@ default: &default
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   username: user
   password: user123
-  host: localhost
+  host: 192.168.1.100
   port: 3306
   timeout: 5000
 
 development:
-  <<: *default
-  database: seguros_gt
-
-test:
   <<: *default
   database: seguros_gt
 
