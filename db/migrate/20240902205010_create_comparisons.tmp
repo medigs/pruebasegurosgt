@@ -1,0 +1,7 @@
+class CreateComparisons < ActiveRecord::Migration[7.2]
+  def change
+    create_table :comparisons do |t|
+      t.timestamps
+    end
+  end
+end

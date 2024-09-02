@@ -41,3 +41,6 @@ group :development, :test do
 end
 
 
+gem 'colorize'
+
+gem 'mysql2'
