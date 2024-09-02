@@ -10,10 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.2].define(version: 2024_09_02_224439) do
+ActiveRecord::Schema[7.2].define(version: 2024_09_02_231728) do
   create_table "reportes", charset: "latin1", force: :cascade do |t|
     t.string "nombre_reporte"
-    t.integer "estado"
+    t.integer "estado", default: 0
     t.bigint "usuario_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -23,7 +23,7 @@ ActiveRecord::Schema[7.2].define(version: 2024_09_02_224439) do
   create_table "usuarios", charset: "latin1", force: :cascade do |t|
     t.string "email"
     t.string "password_digest"
-    t.boolean "active"
+    t.boolean "active", default: true
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["email"], name: "index_usuarios_on_email", unique: true
